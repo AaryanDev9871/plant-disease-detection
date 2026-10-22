@@ -1,0 +1,525 @@
+
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap");
+
+:root {
+  font-family: "DM Sans", sans-serif;
+  color: #25382b;
+  background: #f5f7f1;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+.navbar {
+  min-height: 82px;
+  padding: 18px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  border-bottom: 1px solid #e0e7dc;
+  background: #fff;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  color: #24382a;
+  font: 800 19px "Manrope", sans-serif;
+  letter-spacing: -0.5px;
+}
+
+.brand-icon {
+  color: #4e8659;
+  font-size: 27px;
+}
+
+.college-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 5px;
+  text-align: right;
+}
+
+.college-info strong {
+  color: #26392b;
+  font-size: 13px;
+}
+
+.college-info span {
+  color: #617264;
+  font-size: 11px;
+}
+
+.hero {
+  max-width: 900px;
+  padding: 66px 24px 49px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.eyebrow,
+.step-label {
+  color: #467a4f;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.7px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 11px 15px;
+  border: 1px solid #dce7d8;
+  border-radius: 50px;
+  background: #fff;
+}
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #5d9b68;
+}
+
+.hero h1 {
+  margin: 23px 0 17px;
+  color: #25382b;
+  font: 800 clamp(38px, 5.8vw, 61px)/1.13 "Manrope", sans-serif;
+  letter-spacing: -2.5px;
+}
+
+.hero h1 span {
+  color: #4e8c5b;
+}
+
+.subtitle {
+  max-width: 570px;
+  margin: 0 auto;
+  color: #5d6c60;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.workspace {
+  width: min(1050px, 88%);
+  margin: 0 auto 65px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+  gap: 24px;
+}
+
+.panel {
+  min-width: 0;
+  padding: 28px;
+  border: 1px solid #e1e8dd;
+  border-radius: 17px;
+  background: #fff;
+  box-shadow: 0 10px 32px #233a2710;
+}
+
+.section-heading {
+  min-height: 48px;
+  margin-bottom: 23px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.section-heading h2 {
+  margin: 7px 0 0;
+  color: #293b2e;
+  font: 700 17px "Manrope", sans-serif;
+  letter-spacing: -0.4px;
+}
+
+.file-type {
+  color: #707e72;
+  font-size: 9px;
+  white-space: nowrap;
+}
+
+.dropzone {
+  height: 245px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 1.5px dashed #b9cdb6;
+  border-radius: 12px;
+  background: #f6f9f3;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.dropzone:hover {
+  border-color: #67966a;
+  background: #f0f6ec;
+}
+
+.dropzone.has-image {
+  border-style: solid;
+  background: #edf3e9;
+}
+
+.preview-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.upload-placeholder {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+
+.upload-icon {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 13px;
+  background: #e4efe0;
+  color: #3f7749;
+  font-size: 26px;
+}
+
+.upload-placeholder strong {
+  color: #293c2e;
+  font-size: 13px;
+}
+
+.upload-placeholder span,
+.upload-placeholder small {
+  color: #69796b;
+  font-size: 11px;
+}
+
+.selected-file {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+  color: #4d7753;
+  font-size: 12px;
+}
+
+.file-name {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.remove-button {
+  border: 0;
+  background: transparent;
+  color: #985e56;
+  font-size: 11px;
+}
+
+.predict-button {
+  width: 100%;
+  min-height: 49px;
+  margin-top: 20px;
+  border: 0;
+  border-radius: 9px;
+  background: #356b43;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  transition: background 0.2s;
+}
+
+.predict-button:hover:not(:disabled) {
+  background: #285735;
+}
+
+.predict-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.privacy-note {
+  margin: 13px 0 0;
+  color: #6e7b70;
+  text-align: center;
+  font-size: 10px;
+}
+
+.result-tag {
+  padding: 8px 10px;
+  border-radius: 7px;
+  background: #edf4e9;
+  color: #3d6d45;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.result-empty {
+  min-height: 355px;
+  padding: 24px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.result-placeholder {
+  width: 66px;
+  height: 66px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 21px;
+  border-radius: 19px;
+  background: #edf3e8;
+  color: #47774d;
+  font: 700 23px "Manrope", sans-serif;
+}
+
+.result-empty strong {
+  color: #293c2e;
+  font-size: 13px;
+}
+
+.result-empty p {
+  margin: 10px 0 22px;
+  color: #69796b;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.result-feature {
+  width: 100%;
+  max-width: 280px;
+  padding: 12px;
+  margin-top: 7px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #e6ece2;
+  border-radius: 8px;
+  color: #4f6252;
+  text-align: left;
+  font-size: 10px;
+}
+
+.result-feature span {
+  color: #477c50;
+  font-weight: 700;
+}
+
+.result-content {
+  padding-top: 18px;
+}
+
+.result-symbol {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  background: #e7f2e3;
+  color: #347345;
+  font-size: 23px;
+}
+
+.result-overline {
+  display: block;
+  margin-top: 24px;
+  color: #526b56;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+}
+
+.result-content h3 {
+  margin: 10px 0 27px;
+  overflow-wrap: anywhere;
+  color: #26392b;
+  font: 700 23px/1.4 "Manrope", sans-serif;
+}
+
+.confidence-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  color: #536655;
+  font-size: 12px;
+}
+
+.confidence-row strong {
+  color: #326a40;
+  font-size: 16px;
+}
+
+.confidence-track {
+  height: 7px;
+  margin-top: 12px;
+  overflow: hidden;
+  border-radius: 20px;
+  background: #e6ede2;
+}
+
+.confidence-fill {
+  height: 100%;
+  border-radius: inherit;
+  background: #63996b;
+  transition: width 0.4s;
+}
+
+.result-disclaimer {
+  margin: 24px 0;
+  color: #5f7061;
+  font-size: 11px;
+  line-height: 1.8;
+}
+
+.secondary-button {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #d7e3d2;
+  border-radius: 9px;
+  background: #fff;
+  color: #356c43;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.secondary-button:hover {
+  background: #f3f7f0;
+}
+
+.error-message {
+  color: #a42e2e;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.loader {
+  width: 36px;
+  height: 36px;
+  margin-bottom: 24px;
+  border: 3px solid #e0eadb;
+  border-top-color: #477e51;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+footer {
+  width: min(1050px, 88%);
+  margin: 0 auto;
+  padding: 22px 0 30px;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  border-top: 1px solid #e0e7dc;
+  color: #657466;
+  font-size: 11px;
+}
+
+@media (max-width: 760px) {
+  .navbar {
+    padding: 16px 5%;
+  }
+
+  .brand {
+    font-size: 14px;
+  }
+
+  .brand-icon {
+    font-size: 21px;
+  }
+
+  .college-info span {
+    max-width: 150px;
+    font-size: 9px;
+  }
+
+  .college-info strong {
+    font-size: 11px;
+  }
+
+  .hero {
+    padding-top: 50px;
+  }
+
+  .hero h1 {
+    letter-spacing: -1.5px;
+  }
+
+  .workspace {
+    width: 92%;
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .panel {
+    padding: 21px;
+  }
+
+  .dropzone {
+    height: 220px;
+  }
+
+  footer {
+    width: 92%;
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 400px) {
+  .navbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .college-info {
+    align-items: flex-start;
+    text-align: left;
+  }
+}
